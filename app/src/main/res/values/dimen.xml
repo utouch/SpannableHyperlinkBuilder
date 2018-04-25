@@ -1,0 +1,7 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<resources>
+    <dimen name="margin">15dp</dimen>
+    <dimen name="textSize">18sp</dimen>
+    <dimen name="agreementDefTextSize">17sp</dimen>
+    <dimen name="agreementDefMarginLeft">12dp</dimen>
+</resources>
