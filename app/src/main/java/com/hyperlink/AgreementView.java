@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -23,6 +24,7 @@ public class AgreementView extends LinearLayout {
     private int tvSize;
     private int tvColor;
     private int marginLeft;
+    private CheckBox cBox;
     private SpannableHyperlinkBuilder mSpannableHyperlinkBuilder;
 
     public AgreementView(Context context) {
@@ -54,7 +56,7 @@ public class AgreementView extends LinearLayout {
     private void init() {
         mSpannableHyperlinkBuilder = new SpannableHyperlinkBuilder();
         setOrientation(HORIZONTAL);
-        CheckBox cBox = new CheckBox(context);
+        cBox = new CheckBox(context);
         cBox.setButtonDrawable(cbBackground);
         addView(cBox);
         TextView textView = new TextView(context);
@@ -79,5 +81,8 @@ public class AgreementView extends LinearLayout {
         mSpannableHyperlinkBuilder.setOnTextSpannableClick(listener);
     }
 
+    public void setOnCheckedListener(CompoundButton.OnCheckedChangeListener checkedChangeListener) {
+        cBox.setOnCheckedChangeListener(checkedChangeListener);
+    }
 
 }
